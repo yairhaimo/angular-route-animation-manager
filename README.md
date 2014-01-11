@@ -1,8 +1,8 @@
 # angular-route-animation-manager
-===============================
 
 #### A provider that helps you manage transitions when routing from one view to another
-
+----
+###Note: This is more a tutorial/demo than a production plugin and has not been tested in all browsers.
 
 >**[Check out this plunker for a working demo](http://plnkr.co/edit/i50zwH5WvZ4eZeODHfcN?p=preview)**
 -
