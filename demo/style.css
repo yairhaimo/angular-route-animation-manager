@@ -1,8 +1,10 @@
+/* Put your css in here */
+
 .page {
   height: 100px;
   width: 200px;
   font-size: 1.5em;
-  border: 1px solid #c8c8c8;
+  outline: 1px solid #c8c8c8;
   color: white;
 }
 
@@ -97,22 +99,29 @@
 
 .rotate .view-animate {
     -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
 }
 .rotate  .view-animate.ng-leave {
     -webkit-animation-name: rotate-leave;
+    -moz-animation-name: rotate-leave;
 }
 .rotate .view-animate.ng-enter {
     -webkit-animation-name: rotate-enter;
+    -moz-animation-name: rotate-enter;
 }
 @-webkit-keyframes rotate-leave {
     0% {
         -webkit-transform-origin: center center;
         -webkit-transform: rotate(0);
+        transform-origin: center center;
+        transform: rotate(0);
         opacity: 1;
     }
     100% {
         -webkit-transform-origin: center center;
         -webkit-transform: rotate(-180deg);
+        transform-origin: center center;
+        transform: rotate(-180deg);
         opacity: 0;
     }
 }
@@ -120,11 +129,15 @@
     0% {
         -webkit-transform-origin: center center;
         -webkit-transform: rotate(-180deg);
+        transform-origin: center center;
+        transform: rotate(-180deg);
         opacity: 0;
     }
     100% {
         -webkit-transform-origin: center center;
         -webkit-transform: rotate(-360deg);
+        transform-origin: center center;
+        transform: rotate(-360deg);
         opacity: 1;
     }
 }
@@ -134,23 +147,44 @@
 /* -moz, -o- prefexies are skipped */
 .flip .view-animate {
 	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -webkit-transform 1s;
+	-o-transition: -webkit-transform 1s;
 	-webkit-perspective: 600px;
 }
 .flip .view-animate {
 	-webkit-transform-style: preserve-3d;
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
 }
 .flip .view-animate.ng-enter {
     -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 .flip .view-animate.ng-enter-active {
 	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	
 }
 .flip .view-animate.ng-leave {
 	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
 }
 .flip .view-animate.ng-leave-active {
 	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
