@@ -35,7 +35,8 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     template: '<div>home</div>',
     data: {
       animationConf: {
-        one: 'fade', //when animating to or from /one url use the fade animation
+        two: 'flip', //when animating to or from the /two url use the flip animation
+        one: 'fade', //when animating to or from the /one url use the fade animation
         default: 'slide' //otherwise use the slide animation
       }
     }
