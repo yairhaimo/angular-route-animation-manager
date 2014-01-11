@@ -14,6 +14,10 @@ Prerequisites are angular.js, angular-animate.js, angular-route.js and a css wit
 
 ## Get Started
 **(1)** Load the angular-route-animation-manager.js and the styles.css files into your html
+```html
+<script src="angular-route-animation-manager.js"></script>
+<link rel="stylesheet" href="animation-styles.css"/>
+```
 
 **(2)** Add the required dependencies to your module: 
 >
