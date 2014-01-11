@@ -14,7 +14,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     template: '<div class="page one">one</div>',
     data: {
       animationConf: {
-        empty: 'flip',
+        root: 'flip',
         default: 'rotate'
       }
     }
