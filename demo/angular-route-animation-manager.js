@@ -31,7 +31,6 @@ app.provider('RouteAnimationManager', function()  {
   //define factory instance
   function RouteAnimationManager() {
     this.setAnimationClass =  function(currentRoute, nextRoute) {
-      var animation;
       if (!nextRoute || !nextRoute.originalPath || !nextRoute.data || !nextRoute.data.animationConf) {return undefined;}
       
       var conf = nextRoute.data.animationConf;
@@ -41,5 +40,5 @@ app.provider('RouteAnimationManager', function()  {
     };
     
     this.animationClass = _animationClass;
-  };
+  }
 });
