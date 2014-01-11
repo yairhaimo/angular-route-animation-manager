@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.7/angular.js" data-semver="1.2.7"></script>
+    <script data-require="angular-route@1.2.7" data-semver="1.2.7" src="http://code.angularjs.org/1.2.7/angular-route.js"></script>
+    <script data-require="angular-animate@1.2.7" data-semver="1.2.7" src="http://code.angularjs.org/1.2.7/angular-animate.js"></script>
+    <script src="angular-route-animation-manager.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+  
+     <div>
+      <a href="#/">Home</a>
+      <a href="#/one">One</a>
+      <a href="#/two">Two</a> 
+      <a href="#/three">Three</a>
+      <div>{{RouteAnimationManager.animationClass.name}}</div>
+    </div>
+    <div class="view-animate-container" ng-class="RouteAnimationManager.animationClass.name">
+      <div ng-view class="view-animate"></div>
+    </div>
+   
+  </body>
+
+</html>
