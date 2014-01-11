@@ -14,7 +14,7 @@ Prerequisites are angular.js, angular-animate.js, angular-route.js and a css wit
 
 ## Get Started
 **(1)** Load the angular-route-animation-manager.js and the styles.css files into your html.
-Note that the css in this project is for the demo app. Remove and excess styles and change it to fit your needs.
+Note that the css in this project is for the demo app. Remove any excess styles and change it to fit your needs.
 ```html
 <script src="angular-route-animation-manager.js"></script>
 <link rel="stylesheet" href="styles.css"/>
