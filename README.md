@@ -8,22 +8,26 @@
 -
 
 This provider helps you define which animations will run when routing to another view.
+The plugin works by setting a predefined class on the ng-view container whenever a route is changing.
 
 Prerequisites are angular.js, angular-animate.js, angular-route.js and a css with defined animations.
 
 ## Get Started
 **(1)** Load the angular-route-animation-manager.js and the styles.css files into your html
+
 **(2)** Add the required dependencies to your module: 
 >
 ```javascript
 angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngRouteAnimationManager']);
 ```
+
 **(3)** (Optional) Configure a default animation:
 ```javascript
 app.config(['RouteAnimationManagerProvider', function(RouteAnimationManagerProvider) {
   RouteAnimationManagerProvider.setDefaultAnimation('fade');
 }]);
 ```
+
 **(4)** Configure your routes for animation:
 ```javascript
 app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routeProvider, RouteAnimationManagerProvider) {
@@ -69,6 +73,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
   RouteAnimationManagerProvider.setDefaultAnimation('fade'); //define a global default animation
 }]);
 ```
+
 **(5)** Define your ng-view in the following manner:
 ```html
 <div class="view-animate-container" ng-class="animationClass.name">
