@@ -43,17 +43,8 @@ app.provider('RouteAnimationManager', function()  {
       
       if (!nextRouteData.name) {return;} //not navigating, probably bootstrapping
   
-      if (nextRouteData.conf[currentRouteData.name]) {//get animation for a specific navigation condition
-        animation = nextRouteData.conf[currentRouteData.name];
-      }
-      else if (nextRouteData.conf.default) {//get default animation for this view
-        animation = nextRouteData.conf.default;
-      }
-      else {//get the default global animation
-        animation = _defaultAnimation;
-      }
+     _animationClass.name = nextRouteData.conf[currentRouteData.name] ||  nextRouteData.conf.default || _defaultAnimation;
       
-      _animationClass.name = animation;
     };
     
     this.animationClass = _animationClass;
