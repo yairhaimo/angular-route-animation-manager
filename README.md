@@ -33,7 +33,6 @@ app.config(['RouteAnimationManagerProvider', function(RouteAnimationManagerProvi
 app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routeProvider, RouteAnimationManagerProvider) {
   $routeProvider.when('/', {
     template: '<div>home</div>',
-    controller: 'MyController',
     data: {
       animationConf: {
         one: 'fade', //when animating to or from /one url use the fade animation
@@ -43,7 +42,6 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
   })
   .when('/one', {
     template: '<div>one</div>',
-    controller: 'MyController',
     data: {
       animationConf: {
         root: 'flip', //when routing from the / url use the flip animation
@@ -53,7 +51,6 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
   })
   .when('/two', {
     template: '<div>two</div>',
-    controller: 'MyController',
     data: {
       animationConf: {
         default: 'slide' //always use the slide animation
