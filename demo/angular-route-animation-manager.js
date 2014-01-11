@@ -31,20 +31,22 @@ app.provider('RouteAnimationManager', function()  {
   //define factory instance
   function RouteAnimationManager() {
     function AnimationRouteData(route) {
-      if (!route || !route.originalPath) return undefined;
+      if (!route || !route.originalPath || !route.data || !route.data.animationConf) return undefined;
       this.conf = route.data.animationConf;
       this.name = route.originalPath.substring(1) || 'root'; //root refers to the '/' route
     }
     
     this.setAnimationClass =  function(currentRoute, nextRoute) {
       var animation;
-      var currentRouteData = currentRoute && new AnimationRouteData(currentRoute);
       var nextRouteData = nextRoute && new AnimationRouteData(nextRoute);
+      
+      if (!nextRoute || !nextRoute.originalPath || !nextRoute.data || !nextRoute.data.animationConf) {_animationClass.name = ''; return;}
+      var conf = nextRoute.data.animationConf;
+      var name = nextRoute.originalPath.substring(1) || 'root'; //root refers to the '/' route
       
       if (!nextRouteData.name) {return;} //not navigating, probably bootstrapping
   
-      _animationClass.name = nextRouteData.conf[currentRouteData.name] ||  nextRouteData.conf.default || _defaultAnimation;
-      
+      _animationClass.name = conf[name] ||  conf.default || _defaultAnimation;
     };
     
     this.animationClass = _animationClass;
