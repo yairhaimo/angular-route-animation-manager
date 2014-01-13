@@ -4,7 +4,7 @@
 ----
 ###Note: This is more a tutorial/demo than a production plugin and has not been tested in all browsers.
 
->**[Check out this plunker for a working demo](http://plnkr.co/edit/i50zwH5WvZ4eZeODHfcN?p=preview)**
+>**[Check out this plunker for a working demo](http://plnkr.co/edit/E66KpxQqhBURAQy6kHpU?p=preview)**
 -
 
 This provider helps you define which animations will run when routing to another view.
@@ -80,7 +80,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
 
 **(5)** Define your ng-view in the following manner:
 ```html
-<div class="view-animate-container" ng-class="animationClass.name">
+<div route-animation-manager>
   <div ng-view class="view-animate"></div>
 </div>
 ```
