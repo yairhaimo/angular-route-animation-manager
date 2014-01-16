@@ -38,8 +38,8 @@ app.provider('RouteAnimationManager', function()  {
       if (currentRoute && currentRoute.originalPath) {
         name = currentRoute.originalPath.substring(1);
       } else {
-        name = 'root';
-      } //root refers to the '/' route
+        name = 'root'; //root refers to the '/' route
+      }
 
       _animationClass.name = conf[name] ||  conf.default || _defaultAnimation;
     };
