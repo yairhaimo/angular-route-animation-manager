@@ -4,7 +4,7 @@
 ----
 ###Note: This is more a tutorial/demo than a production plugin and has not been tested in all browsers.
 
->**[Check out this plunker for a working demo](http://plnkr.co/edit/E66KpxQqhBURAQy6kHpU?p=preview)**
+>**[Check out this plunker for a working demo](http://plnkr.co/edit/vECalSypioxL1sFFTjjt?p=preview)**
 -
 
 This provider helps you define which animations will run when routing to another view.
