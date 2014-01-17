@@ -43,7 +43,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
       animationConf: {
         two: 'flip', //when animating to or from the /two url use the flip animation
         one: 'fade', //when animating to or from the /one url use the fade animation
-        default: 'slide' //otherwise use the slide animation
+        fallback: 'slide' //otherwise use the slide animation
       }
     }
   })
@@ -52,7 +52,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     data: {
       animationConf: {
         root: 'flip', //when routing from the / url use the flip animation
-        default: 'rotate' //otherwise use the rotate animation
+        fallback: 'rotate' //otherwise use the rotate animation
       }
     }
   })
@@ -60,7 +60,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     template: '<div>two</div>',
     data: {
       animationConf: {
-        default: 'slide' //always use the slide animation
+        fallback: 'slide' //always use the slide animation
       }
     }
   }) 
