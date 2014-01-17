@@ -6,7 +6,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     data: {
       animationConf: {
         one: 'fade',
-        default: 'slide'
+        fallback: 'slide'
       }
     }
   })
@@ -15,7 +15,7 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     data: {
       animationConf: {
         root: 'flip',
-        default: 'rotate'
+        fallback: 'rotate'
       }
     }
   })
@@ -23,19 +23,19 @@ app.config(['$routeProvider', 'RouteAnimationManagerProvider', function($routePr
     template: '<div class="page two">two</div>',
     data: {
       animationConf: {
-        default: 'slide'
+        fallback: 'slide'
       }
     }
-  }) 
+  })
   .when('/three', {
     template: '<div class="page three">three</div>',
     data: {
       animationConf: {
       }
     }
-  }) 
+  })
   .otherwise({redirectTo: '/'});
-  
-  
+
+
   RouteAnimationManagerProvider.setDefaultAnimation('fade');
 }]);
